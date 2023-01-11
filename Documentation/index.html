@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <title>Documentation GoStock – Free and Premium Stock Photos Script</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/prism.css" rel="stylesheet">
+    <link href="assets/css/prism-line-highlight.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron jb-bg">
+        <div class="container">
+          <div class="position-relative">
+            <p class="lead">Documentation</p>
+            <h1 class="jumbotron-title">GoStock – Free and Premium Stock Photos Script</h1>
+              <p class="lead" id="tableContent">Created:  02, February 2017 by Miguel Vasquez</p>
+          </div>
+        </div>
+      </div>
+
+<div class="container">
+
+
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="sticky-top">
+            <h5 class="font-weight-bold pt-2 border-0"><i class="far fa-list-alt"></i> Table of Contents</h5>
+
+            <ul class="list-unstyled list-menu pl-0">
+              <li><a href="#Setting" class="scroll-element"><i class="fas fa-angle-right"></i> Setting MySQL</a></li>
+              <li><a href="#Uploading" class="scroll-element"><i class="fas fa-angle-right"></i> Uploading Files</a></li>
+              <li><a href="#Installation" class="scroll-element"><i class="fas fa-angle-right"></i> Installation</a></li>
+              <li><a href="#CronJob" class="scroll-element"><i class="fas fa-angle-right"></i> Cron Job</a></li>
+              <li><a href="#reCAPTCHA" class="scroll-element"><i class="fas fa-angle-right"></i> reCAPTCHA</a></li>
+              <li><a href="#Stripe" class="scroll-element"><i class="fas fa-angle-right"></i> Stripe Webhook</a></li>
+              <li><a href="#Storage" class="scroll-element"><i class="fas fa-angle-right"></i> Storage</a></li>
+              <li><a href="#Customize" class="scroll-element"><i class="fas fa-angle-right"></i> Customize</a></li>
+              <li><a href="#Troubleshooting" class="scroll-element"><i class="fas fa-angle-right"></i> Troubleshooting</a></li>
+              <li><a href="#Permissions" class="scroll-element"><i class="fas fa-angle-right"></i> Folders Permissions</a></li>
+              <li><a href="#ConfigurationPHP" class="scroll-element"><i class="fas fa-angle-right"></i> Basic PHP configuration</a></li>
+              <li><a href="#Sources" class="scroll-element"><i class="fas fa-angle-right"></i> Sources and Credits</a></li>
+  					</ul><!-- /.ul list-cgl -->
+          </div>
+        </div>
+
+        <div class="col-md-9">
+
+          <p class="font-italic mb-4">
+            <strong>GoStock - Free Stock Photos Script</strong>
+            It is a platform to share stock photos free and premium of high quality, users will be able to upload their photos to share with the whole community and visitors, and may receive donations through PayPal.
+            In addition users will be able to give you like, comment, share and add to collections your favorite photos.
+      		</p>
+
+          <h2 class="title2">Features:</h2>
+          <ul class="list-cgl">
+              <li>Built with <strong>Laravel 8</strong></li>
+              <li>Subscription System</li>
+              <li>Stripe Connect</li>
+              <li>PWA</li>
+              <li>Referrals</li>
+              <li>Storage (Local, Amazon, DigitalOcean, Wasabi, Vultr)</li>
+              <li>2FA authentication</li>
+              <li>Taxes</li>
+              <li>Invoices for payments made</li>
+              <li>Bootstrap</li>
+        			<li>Font Awesome</li>
+        			<li>Facebook, Twitter and Google Login</li>
+        			<li>Follow / Unfollow system</li>
+        			<li>Like in Photos</li>
+        			<li>Collections of Photos</li>
+        			<li>Categories</li>
+        			<li>Notifications Real-time</li>
+        			<li>Latest, Featured, Popular, Most Commented, Most Viewed, Most Downloads sections</li>
+        			<li>Photo search</li>
+        			<li>Download photos in different size</li>
+        			<li>Search for photos by colors and cameras</li>
+        			<li>Members can upload unlimited photos</li>
+        			<li>Updates photos</li>
+        			<li>Option Delete Account</li>
+        			<li>Members can change their name, email and password</li>
+        			<li>Upload Avatar</li>
+        			<li>Upload Cover</li>
+        			<li>Change password</li>
+        			<li>Donations through PayPal for members</li>
+        			<li>XSS: Protection from cross site scripting </li>
+        			<li>Secure Bcrypt password hashing</li>
+        			<li>SMTP Support</li>
+        			<li>Share social</li>
+        			<li>Easy translation</li>
+        			<li>Ajax pagination in Photos and Comments</li>
+        			<li>Comment system</li>
+        			<li>Like in comments</li>
+        			<li>Feed section (Posts by users you follow)</li>
+
+
+              <li class="title-list">Admin Features:</li>
+              <li>Create/Edit Plans</li>
+              <li>Manage Subscriptions</li>
+              <li>Create taxes</li>
+              <li>Maintenance mode</li>
+              <li>Manage roles and permissions</li>
+              <li>Change the site name</li>
+      				<li>Change the site title welcome</li>
+      				<li>Manage General Settings and Limits</li>
+      				<li>Statistics</li>
+      				<li>Set keywords for the site. (SEO)</li>
+      				<li>Add a description (SEO)</li>
+      				<li>Create/Edit pages e.g.: Help, Privacy, etc.</li>
+      				<li>Manage Categories</li>
+      				<li>Manage Photos</li>
+      				<li>Manage Members.</li>
+      				<li>Manage Members, Photos Reported</li>
+      				<li>Set up social accounts</li>
+      				<li>Manage Google Adsense, Google Analytics</li>
+              <li>Among other functions...</li>
+
+					</ul><!-- /.ul list-cgl -->
+
+
+          <h2 class="title2">Requirements:</h2>
+          <ul class="list-cgl">
+          <li><strong>PHP 7.4.0 or Greater</strong></li>
+          <li><strong>MySQL 5.7</strong></li>
+          <li>Fileinfo PHP Extension</li>
+          <li>OpenSSL PHP Extension</li>
+          <li>PDO PHP Extension</li>
+          <li>Mbstring PHP Extension</li>
+          <li>Tokenizer PHP Extension</li>
+          <li>XML PHP Extension</li>
+          <li>Ctype PHP Extension</li>
+          <li>JSON PHP Extension</li>
+          <li>BCMath PHP Extension</li>
+          <li>cURL</li>
+          <li>GD Library or ImageMagick or Imagick.</li>
+          <li>allow_url_fopen (PHP.INI) is ON</li>
+          </ul><!-- /.ul list-cgl -->
+
+          <div class="alert alert-warning" role="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong>IMPORTANT:</strong>
+            Make sure your server has <strong>PHP 7.4.0</strong> or higher and <strong>MySQL 5.7</strong> as a minimum
+          </div>
+
+          <h2 id="Setting" class="title2">Setting MySQL <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+            <li class="title-list">1.) Create a database</li>
+            <img class="img-fluid" src="assets/images/db.jpg">
+
+            <li class="title-list">2.) Create a user for database</li>
+            <img class="img-fluid" src="assets/images/db-user.jpg">
+
+            <li class="title-list">3.) Import the Database </li>
+            <li class="mb-4">Log into your phpMyAdmin and import the <code>gostock.sql</code> file located in the folder <code>Mysql</code></li>
+            <img class="img-fluid" src="assets/images/db-import.jpg">
+
+          </ul><!-- /.ul list-cgl -->
+
+
+          <h2 id="Uploading" class="title2">Uploading Files <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+            <li>Upload all files inside the folder <code>"Script"</code> to the <code>"public_html"</code> or <code>"www"</code> folder on your server. You can compress the files or use FTP.</li>
+            <img class="img-fluid" src="assets/images/upload-files.jpg">
+          </ul><!-- /.ul list-cgl -->
+
+          <h2 id="Installation" class="title2">Installation <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+            <li class="mb-3">After you have uploaded all files, go to <code>https://yousite.com/installer/script</code></li>
+
+            <li class="mb-3">
+              This screen will appear, all the boxes must be green to proceed with the installation.
+            </li>
+             <a href="assets/images/install-1.png" target="_blank">
+               <img class="img-fluid" src="assets/images/install-1.png">
+             </a>
+
+             <li class="mb-3">
+               Next, you can put the credentials of your database, your App name, URL and an email.
+             </li>
+              <a href="assets/images/install-2.png" target="_blank">
+                <img class="img-fluid" src="assets/images/install-2.png">
+              </a>
+
+              <li class="mb-3">
+                If all goes well, a success notice will appear with the Admin credentials, remember to change immediately, click Go to Panel Admin.
+              </li>
+              <a href="assets/images/install-3.png" target="_blank">
+                <img class="img-fluid" src="assets/images/install-3.png">
+              </a>
+
+
+<li class="title-list" id="AdminPanel">Credentials Admin Panel</li>
+<li>Just enter from <code>https://yousite.com/login</code> and enter the following credentials.</li>
+
+<pre><code class="language-markup">User: Admin
+Pass: 123456</code></pre>
+
+<li class="title-list" id="CronJob">Create Cron Job</li>
+    <li>Click on Cron Jobs</li>
+    <img class="img-fluid mb-2" src="assets/images/cronjob-1.jpg">
+
+    <li>Click on <strong>Common Settings</strong> and select <strong>Once Per Minute</strong></li>
+    <img class="img-fluid mb-2" src="assets/images/cronjob-2.jpg">
+
+    <pre><code class="language-markup">/usr/local/bin/ea-php74 /home/username/public_html/artisan schedule:run >> /dev/null 2>&1</code></pre>
+
+    <li class="mb-2">In the image above change <strong><em>ea-php74</em></strong> for your PHP version, <strong><em>username</em></strong> for yours, and put the path where your project is located,
+      in my case it is in <strong><em>public_html</em></strong>, but if it is in another directory you should put <strong><em>public_html/yoursite/</em></strong> like this</li>
+
+    <li>
+      Click on <strong><em>Add New Cron Job</em></strong> and you're done!
+    </li>
+
+    <h6 class="alert alert-sm alert-warning" role="alert">
+  <i class="fas fa-exclamation-triangle"></i>
+<strong>Important</strong>: if it doesn't work with <span class="text-dark"><em>/usr/local/bin/ea-php74</em></span> or whatever PHP version you have try <span class="text-dark"><em>/usr/local/bin/php</em></span>
+</h6>
+
+    <li class="title-list" id="reCAPTCHA">reCAPTCHA</li>
+    <li>Go to <code>https://yousite.com/panel/admin/google</code></li>
+    <li>Get your API keys here <a href="https://www.google.com/recaptcha/admin/create" target="_blank">https://www.google.com/recaptcha/admin/create</a></li>
+
+    <div class="alert alert-sm alert-warning" role="alert">
+      <i class="fas fa-exclamation-triangle"></i>
+      <strong>IMPORTANT:</strong>
+      choose <strong>reCAPTCHA v2</strong> and <strong>Invisible reCAPTCHA</strong>
+    </div>
+
+    <li class="title-list" id="Stripe">Stripe Webhook</li>
+<li>
+  Go to the Developers section of the Stripe dashboard and click on Webhooks.
+Click on Add a new endpoint
+</li>
+<img class="img-fluid" src="assets/images/stripe.png">
+<li><strong>1)</strong> Your webhook url must end in <code>stripe/webhook</code></li>
+<li><strong>2)</strong> Click on <code>Signing secret</code> to reveal the Stripe Webhook Secret that you must place in <code>Dashboard > Payment Settings > Stripe</code></li>
+<li><strong>3)</strong> The events you should add to your webhook</li>
+
+<li>
+  API Version <code>2020-08-27</code>
+</li>
+
+<li class="title-list">Stripe Connect</li>
+<li>Set the countries or the country you want to send direct payments to your members at <a href="https://dashboard.stripe.com/settings/connect/express">https://dashboard.stripe.com/settings/connect/express</a></li>
+
+</ul><!-- /.ul list-cgl -->
+
+<h2 id="Storage" class="title2">Storage <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+<ul class="list-cgl">
+  <li>Go to <code>https://yousite.com/panel/admin/storage</code></li>
+
+<h6 class="alert alert-sm alert-warning" role="alert">
+  <i class="fas fa-exclamation-triangle"></i>
+  Wasabi in trial mode does not allow public files, you must send an email to <strong>support@wasabi.com</strong> to enable public files, or avoid trial mode.
+</h6>
+
+<h6 class="alert alert-sm alert-warning" role="alert">
+  <i class="fas fa-exclamation-triangle"></i>
+<strong>Important</strong>: If you want to migrate your site to any storage service (Amazon, DigtalOcean or Wasabi), you must upload the following folders located in the <strong><em>public</em></strong> folder of your current site:
+</h6>
+
+<ul>
+  <li><strong>avatar</strong></li>
+  <li><strong>cover</strong></li>
+  <li><strong>uploads</strong></li>
+</ul>
+
+<h6 class="alert alert-sm alert-warning" role="alert">
+  <i class="fas fa-exclamation-triangle"></i>
+<strong>Important</strong>: If your site is new you should upload only these folders located in the <strong><em>public</em></strong>:
+</h6>
+<ul>
+  <li><strong>avatar</strong></li>
+  <li><strong>cover</strong></li>
+</ul>
+  </ul><!-- /.ul list-cgl -->
+
+
+
+          <h2 id="Customize" class="title2">Customize <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+            <li class="title-list">Homepage title</li>
+            <img class="img-fluid mb-2" src="assets/images/home.png">
+            <li class="font-italic">File: <code>resources/lang/en/seo.php</code></li>
+
+            <li class="title-list">Language files</li>
+            <li class="font-italic">To change the script language go to: <strong>resources / lang / en /</strong> Edit the text strings of all the files in are in that folder.</li>
+            <pre class="line-numbers" data-start="5"><code class="language-php">/*
+|--------------------------------------------------------------------------
+| Admin Language Lines
+|--------------------------------------------------------------------------
+|
+*/
+
+'admin'      => 'Panel Admin',
+'role_admin' => 'Admin',
+'dashboard'  => 'Dashboard',</code></pre>
+
+<div class="alert alert-sm alert-info" role="alert">
+  <i class="fas fa-info-circle"></i>
+  <strong>Note:</strong>
+  You should only edit the right string, i.e .: <strong>'role_admin' => 'Edit this...',</strong>
+</div>
+
+          </ul><!-- /.ul list-cgl -->
+
+          <h2 id="lang" class="title2">How to add a new language <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+          <li>Duplicate the folder <strong>resources / lang / en</strong></li>
+          <li>Rename to your language for example <strong>es</strong></li>
+          <li>Translate the strings</li>
+          <li>Duplicate the file <strong>public/ js / jqueryTimeago_en.js</strong> and rename ie: <strong>public/ js / jqueryTimeago_es.js </strong></li>
+          <li>Translate the strings the new file</li>
+          <li>Go panel admin <code><strong>https://yourwebsite.com/panel/admin/languages/create</strong></code> and add you new lenguage</li>
+
+          <h2 class="title2 mt-4">Translate Categories</h2>
+          <li>Create a file called <strong>categories.php</strong> in the folder of the language to be translated, for example <strong>resources / lang / es</strong></li>
+
+          <pre class="line-numbers" data-start="5"><code class="language-php">&lt;?php
+
+return array(
+
+	/*
+	|--------------------------------------------------------------------------
+	| Categories Language Lines
+	|--------------------------------------------------------------------------
+	|
+	*/
+	"animals" => "Animales",
+	"architecture" => "Arquitectura",
+	"backgrounds" => "Fondos / Texturas",
+);</code></pre>
+
+          <li>The key identifier will be the Slug / URL of the category</li>
+
+          <h2 class="title2 mt-4">Translate Pages</h2>
+          <li>Just create a page by selecting the new language, remember that you must put the same Slug / URL</li>
+
+        <hr />
+
+        <h2 class="title2 mt-4">Sitemap</h2>
+        <li class="mb-4"><code>https://yoursite.com/sitemaps.xml</code></li>
+
+        <h2 id="Troubleshooting" class="title2">Troubleshooting </h2>
+        <li><strong>I can't turn off maintenance mode</strong></li>
+        <li class="mb-4">Go to <code>storage / framework</code> and delete the file named <code>down</code> and file <code>maintenance.php</code> go back to <code>Dashboard > Maintenance mode</code> put "off" and then "on" again, whenever you want to have your site in mode maintenance.</li>
+
+        <li><strong>Error creating an account</strong></li>
+        <li class="mb-4">Make sure you have correctly configured the email in the admin panel (<code>Dashboard > Email settings</code>)</li>
+
+        <li><strong>Error 404 in the installer</strong></li>
+        <li class="mb-4">Check that your <code>.htaccess</code> file has not been corrupted when uploading to your server.</li>
+
+        <li><strong>Error 500 in the installer or on the home page</strong></li>
+        <li class="mb-4">Check that your <code>.env</code> file has not been corrupted when uploading to your server. It must have a dot before the name, and you must have at least PHP 7.4</li>
+      <hr />
+
+          <h2 class="title2" id="Permissions">Make sure these folders have 0755 permissions <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+            <span><strong><i class="fas fa-file"></i> Files</strong></span>
+            <li class="mb-3">.env</li>
+
+            <span><strong><i class="fas fa-folder-open"></i> Folders</strong></span>
+            <li>public / avatar</li>
+            <li>public / temp</li>
+        		<li>public / uploads</li>
+            <li>public / uploads / files</li>
+        		<li>public / uploads / large</li>
+        		<li>public / uploads / medium</li>
+        		<li>public / uploads / small</li>
+        		<li>public / uploads / thumbnail</li>
+        		<li>public / avatar</li>
+        		<li>public / cover</li>
+        		<li>public / img-category</li>
+            <br>
+
+            <h2 class="title2" id="ConfigurationPHP">Basic PHP configuration</h2>
+            <li><code>max_execution_time</code> minimum 6000</li>
+            <li><code>memory_limit</code> set to 512M</li>
+        		<li><code>post_max_size</code> set the maximum upload value you want</li>
+            <li><code>upload_max_filesize</code> must be the same maximum value of <code>post_max_size</code></li>
+            <hr />
+
+          <h2 id="Sources" class="title2">Sources and Credits <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+            <li>Laravel - http://laravel.com/</li>
+      			<li>jQuery - http://jquery.com/</li>
+      			<li>Bootstrap - http://getbootstrap.com/</li>
+      			<li>Font Awesome - http://fortawesome.github.io/Font-Awesome/</li>
+      			<li>jquery Form // malsup.com/jquery/form/‎</li>
+      			<li>jqueryTimeago.js // http://timeago.yarp.com/</li>
+      			<li>Readmore - http://jedfoster.com/Readmore.js/</li>
+      			<li>Images - unsplash - http://unsplash.com/ -- splitshire http://www.splitshire.com/</li>
+      			<li>Fonts - https://www.google.com/fonts</li>
+      			<li>http://www.tinymce.com/</li>
+            <li>https://ckeditor.com/</li>
+      			<li>https://www.chartjs.org</li>
+          </ul><!-- /.ul list-cgl -->
+
+          <hr />
+
+          <div class="text-center">
+            <p class="lead">Any problem or doubt send me an email to <strong>support@miguelvasquez.net</strong> <br/>
+            Do not forget to visit <strong><a href="https://miguelvasquez.net/" target="_blank">miguelvasquez.net</a></strong></p>
+          </div>
+
+          <hr />
+
+          <div class="text-center">
+            <small class="form-text text-muted">Thank you for purchasing my script 😉</small>
+          </div>
+
+        </div><!-- /.col-md-12 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    </main><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; Miguel Vasquez - Web Design and Development All Rights Reserved.
+          <a href="https://www.facebook.com/MiguelVasquezWeb"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/MigueVasquezweb"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/miguelvasquezweb"><i class="fab fa-instagram"></i></a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/prism-line-highlight.js"></script>
+
+    <script type="text/javascript">
+
+    function scrollElement(element){
+    	var offset = $(element).offset().top;
+    	$('html, body').animate({scrollTop:offset}, 500);
+    };
+
+    $('.scroll-element').click(function(e) {
+      e.preventDefault();
+      $this = $(this);
+      $value = $this.attr('href');
+      scrollElement($value);
+    });
+    </script>
+
+  </body>
+</html>
